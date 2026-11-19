@@ -25,7 +25,9 @@
     </section>
 
     <section id="record" hidden>
-      <dl>
+      <dl>        
+        <dt>ID</dt>
+        <dd id="id"></dd>
         <dt>Name</dt>
         <dd id="name"></dd>
         <dt>Gender</dt>
@@ -70,6 +72,7 @@
       document.getElementById("gender").textContent = patient.gender || "Not recorded";
       document.getElementById("birth-date").textContent = patient.birthDate || "Not recorded";
       document.getElementById("age").textContent = formatAge(patient.birthDate);
+      document.getElementById("id").textContent = patient.id || "Not found";
     }
 
     function showError(error) {
